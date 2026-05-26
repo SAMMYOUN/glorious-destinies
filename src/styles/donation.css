@@ -1,0 +1,449 @@
+/* ===========================
+   Donation Section Styles
+   =========================== */
+
+.donation-section {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #1e4620 100%);
+    color: var(--text-light);
+    padding: 4rem 2rem;
+    margin: 3rem 0;
+    border-radius: 12px;
+    box-shadow: var(--shadow-lg);
+}
+
+.donation-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.donation-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.donation-header h2 {
+    color: var(--text-light);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.donation-header p {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+.donation-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+/* Bank Account Section */
+.bank-details {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 2.5rem;
+    border-radius: 12px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+.bank-details h3 {
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.bank-details h3::before {
+    content: "🏦";
+    font-size: 1.8rem;
+}
+
+.bank-info-item {
+    margin-bottom: 1.8rem;
+    padding-bottom: 1.8rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.bank-info-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.bank-info-label {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.7);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.bank-info-value {
+    font-size: 1.3rem;
+    color: var(--text-light);
+    font-weight: 600;
+    word-break: break-all;
+    font-family: 'Courier New', monospace;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 0.8rem;
+    border-radius: 6px;
+    border-left: 4px solid var(--secondary-color);
+}
+
+.copy-btn {
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-top: 0.8rem;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.copy-btn:hover {
+    background-color: #e8860a;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(243, 156, 18, 0.4);
+}
+
+.copy-btn.copied {
+    background-color: #27ae60;
+}
+
+/* Donation Methods */
+.donation-methods {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 2.5rem;
+    border-radius: 12px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+.donation-methods h3 {
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.donation-methods h3::before {
+    content: "💝";
+    font-size: 1.8rem;
+}
+
+.donation-method {
+    margin-bottom: 1.5rem;
+    padding: 1.2rem;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    border-left: 4px solid var(--secondary-color);
+    transition: all 0.3s ease;
+}
+
+.donation-method:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateX(5px);
+}
+
+.donation-method-title {
+    font-weight: 600;
+    color: var(--text-light);
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.donation-method-desc {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6;
+}
+
+.donation-impact {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-top: 1.5rem;
+    border-left: 4px solid var(--secondary-color);
+}
+
+.donation-impact p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.7;
+}
+
+/* ===========================
+   Social Media Share Buttons
+   =========================== */
+
+.social-share-section {
+    background-color: var(--bg-light);
+    padding: 3rem 2rem;
+    margin: 3rem 0;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.social-share-section h2 {
+    color: var(--text-dark);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.social-share-section p {
+    color: #666;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.social-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow);
+    border: none;
+    cursor: pointer;
+}
+
+.social-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+/* Facebook */
+.social-btn.facebook {
+    background-color: #1877F2;
+    color: white;
+}
+
+.social-btn.facebook:hover {
+    background-color: #165ec9;
+}
+
+/* Twitter/X */
+.social-btn.twitter {
+    background-color: #000000;
+    color: white;
+}
+
+.social-btn.twitter:hover {
+    background-color: #333333;
+}
+
+/* WhatsApp */
+.social-btn.whatsapp {
+    background-color: #25D366;
+    color: white;
+}
+
+.social-btn.whatsapp:hover {
+    background-color: #1fa851;
+}
+
+/* LinkedIn */
+.social-btn.linkedin {
+    background-color: #0A66C2;
+    color: white;
+}
+
+.social-btn.linkedin:hover {
+    background-color: #084fa6;
+}
+
+/* Instagram */
+.social-btn.instagram {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    color: white;
+}
+
+.social-btn.instagram:hover {
+    opacity: 0.8;
+}
+
+/* Email */
+.social-btn.email {
+    background-color: #EA4335;
+    color: white;
+}
+
+.social-btn.email:hover {
+    background-color: #c5221f;
+}
+
+/* TikTok */
+.social-btn.tiktok {
+    background: linear-gradient(45deg, #25f4ee 0%, #ff0050 100%);
+    color: white;
+}
+
+.social-btn.tiktok:hover {
+    opacity: 0.8;
+}
+
+/* YouTube */
+.social-btn.youtube {
+    background-color: #FF0000;
+    color: white;
+}
+
+.social-btn.youtube:hover {
+    background-color: #cc0000;
+}
+
+/* Tooltip for social buttons */
+.social-btn-label {
+    display: block;
+    font-size: 0.75rem;
+    margin-top: 0.5rem;
+    text-align: center;
+    color: var(--text-dark);
+    font-weight: 600;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .donation-section {
+        padding: 2rem 1.5rem;
+        margin: 2rem 0;
+    }
+
+    .donation-header h2 {
+        font-size: 1.8rem;
+    }
+
+    .donation-header p {
+        font-size: 1rem;
+    }
+
+    .donation-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .bank-details,
+    .donation-methods {
+        padding: 1.5rem;
+    }
+
+    .bank-details h3,
+    .donation-methods h3 {
+        font-size: 1.3rem;
+    }
+
+    .bank-info-value {
+        font-size: 1.1rem;
+    }
+
+    .social-share-section {
+        padding: 2rem 1.5rem;
+        margin: 2rem 0;
+    }
+
+    .social-share-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .social-buttons {
+        gap: 1rem;
+    }
+
+    .social-btn {
+        width: 55px;
+        height: 55px;
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .donation-section {
+        padding: 1.5rem 1rem;
+        margin: 1.5rem 0;
+    }
+
+    .donation-header h2 {
+        font-size: 1.5rem;
+    }
+
+    .donation-header p {
+        font-size: 0.95rem;
+    }
+
+    .bank-details,
+    .donation-methods {
+        padding: 1.2rem;
+    }
+
+    .bank-details h3,
+    .donation-methods h3 {
+        font-size: 1.2rem;
+    }
+
+    .bank-info-value {
+        font-size: 1rem;
+    }
+
+    .copy-btn {
+        width: 100%;
+        padding: 0.7rem;
+    }
+
+    .donation-method {
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .social-share-section {
+        padding: 1.5rem 1rem;
+        margin: 1.5rem 0;
+    }
+
+    .social-share-section h2 {
+        font-size: 1.3rem;
+    }
+
+    .social-share-section p {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .social-buttons {
+        gap: 0.8rem;
+    }
+
+    .social-btn {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+}

@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="src/styles/main.css">
     <link rel="stylesheet" href="src/styles/responsive.css">
     <link rel="stylesheet" href="src/styles/carousel.css">
+    <link rel="stylesheet" href="src/styles/donation.css">
 </head>
 <body>
     <!-- Navigation Bar -->
@@ -220,6 +221,89 @@
             </div>
         </section>
 
+        <!-- Donation Section -->
+        <section class="donation-section">
+            <div class="donation-container">
+                <div class="donation-header">
+                    <h2>Support Our Mission</h2>
+                    <p>Your generous donation helps us provide education, healthcare, and humanitarian support to vulnerable children in Ghana. Every contribution makes a real difference in a child's life.</p>
+                </div>
+
+                <div class="donation-content">
+                    <!-- Bank Account Details -->
+                    <div class="bank-details">
+                        <h3>Bank Transfer</h3>
+                        
+                        <div class="bank-info-item">
+                            <div class="bank-info-label">Bank Name</div>
+                            <div class="bank-info-value" data-bank-name>ADB (African Development Bank)</div>
+                        </div>
+
+                        <div class="bank-info-item">
+                            <div class="bank-info-label">Account Name</div>
+                            <div class="bank-info-value" data-account-name>GLORIOUS DESTINIES</div>
+                        </div>
+
+                        <div class="bank-info-item">
+                            <div class="bank-info-label">Account Number</div>
+                            <div class="bank-info-value" data-account-number>1091000110143701</div>
+                            <button class="copy-btn" data-copy="1091000110143701">📋 Copy Account Number</button>
+                        </div>
+
+                        <div class="donation-impact">
+                            <p><strong>💡 Your Impact:</strong> A donation of $50 can provide school supplies for 5 children. $100 can feed 20 children for a month. $500 can sponsor a child's education for a year.</p>
+                        </div>
+                    </div>
+
+                    <!-- Donation Methods -->
+                    <div class="donation-methods">
+                        <h3>Ways to Donate</h3>
+                        
+                        <div class="donation-method">
+                            <div class="donation-method-title">🏦 Bank Transfer</div>
+                            <div class="donation-method-desc">Transfer funds directly to our ADB account using the details provided. Please include your name as reference.</div>
+                        </div>
+
+                        <div class="donation-method">
+                            <div class="donation-method-title">💳 Mobile Money</div>
+                            <div class="donation-method-desc">Send donations via mobile money services. Contact us for mobile money details.</div>
+                        </div>
+
+                        <div class="donation-method">
+                            <div class="donation-method-title">🎁 In-Kind Donations</div>
+                            <div class="donation-method-desc">Donate educational materials, clothing, food, or medical supplies. Contact us to arrange pickup or delivery.</div>
+                        </div>
+
+                        <div class="donation-method">
+                            <div class="donation-method-title">🤝 Sponsorship Programs</div>
+                            <div class="donation-method-desc">Sponsor a child's education or health program. Build a lasting relationship and make a direct impact.</div>
+                        </div>
+
+                        <div class="donation-impact">
+                            <p><strong>✨ Tax Deductible:</strong> We are a registered charitable organization. Your donation may be tax-deductible. Contact us for tax documentation.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Social Media Share Section -->
+        <section class="social-share-section">
+            <h2>Share Our Mission</h2>
+            <p>Help us reach more people and make a greater impact. Share Glorious Destinies with your friends and family on social media.</p>
+            
+            <div class="social-buttons">
+                <a href="#" class="social-btn facebook" data-platform="facebook" title="Share on Facebook">📘</a>
+                <a href="#" class="social-btn twitter" data-platform="twitter" title="Share on Twitter">𝕏</a>
+                <a href="#" class="social-btn whatsapp" data-platform="whatsapp" title="Share on WhatsApp">💬</a>
+                <a href="#" class="social-btn linkedin" data-platform="linkedin" title="Share on LinkedIn">💼</a>
+                <a href="#" class="social-btn instagram" data-platform="instagram" title="Share on Instagram">📷</a>
+                <a href="#" class="social-btn email" data-platform="email" title="Share via Email">✉️</a>
+                <a href="#" class="social-btn tiktok" data-platform="tiktok" title="Share on TikTok">🎵</a>
+                <a href="#" class="social-btn youtube" data-platform="youtube" title="Share on YouTube">▶️</a>
+            </div>
+        </section>
+
         <!-- Call to Action Section -->
         <section class="cta-section">
             <h2>Make a Difference Today</h2>
@@ -246,11 +330,22 @@
                     <li><a href="src/pages/services/index.html">Services</a></li>
                     <li><a href="src/pages/gallery/index.html">Gallery</a></li>
                     <li><a href="src/pages/contact/index.html">Contact</a></li>
+                    <li><a href="#donation-section">Donate</a></li>
                 </ul>
             </div>
             <div class="footer-section">
                 <h4>Contact Info</h4>
                 <p>HNO3, 2nd Street Sakaman<br>Greater Accra Region, Ghana</p>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <p>Connect with us on social media</p>
+                <div style="display: flex; gap: 1rem; margin-top: 1rem;">
+                    <a href="https://facebook.com" target="_blank" style="color: white; font-size: 1.5rem;">📘</a>
+                    <a href="https://twitter.com" target="_blank" style="color: white; font-size: 1.5rem;">𝕏</a>
+                    <a href="https://instagram.com" target="_blank" style="color: white; font-size: 1.5rem;">📷</a>
+                    <a href="https://linkedin.com" target="_blank" style="color: white; font-size: 1.5rem;">💼</a>
+                </div>
             </div>
         </div>
         <div class="footer-bottom">
@@ -260,5 +355,6 @@
 
     <script src="src/components/navigation.js"></script>
     <script src="src/components/carousel.js"></script>
+    <script src="src/components/donation.js"></script>
 </body>
 </html>
