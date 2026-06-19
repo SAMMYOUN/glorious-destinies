@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Rigid E-Commerce Interface</title>
+    <title>Full Screen Rigid E-Commerce Interface</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
-        // Configure Tailwind custom colors and options for dark mode compatibility
         tailwind.config = {
             darkMode: 'class',
             theme: {
@@ -46,15 +45,17 @@
         }
     </style>
 </head>
-<body class="bg-gray-100 dark:bg-darkBg text-gray-800 dark:text-gray-100 min-h-screen transition-colors duration-300 md:py-6">
+<body class="bg-gray-100 dark:bg-darkBg text-gray-800 dark:text-gray-100 min-h-screen transition-colors duration-300">
 
-    <div class="w-full max-w-md mx-auto bg-white dark:bg-darkSurface min-h-screen md:min-h-[85vh] relative shadow-2xl flex flex-col overflow-x-hidden pb-20 md:rounded-2xl transition-all duration-300">
+    <div class="w-full min-h-screen relative bg-white dark:bg-darkSurface flex flex-col overflow-x-hidden pb-24 transition-all duration-300">
         
-        <header class="sticky top-0 bg-white dark:bg-darkSurface z-50 px-4 py-3 border-b border-gray-200 dark:border-gray-800 transition-colors duration-300">
-            <div class="flex items-center gap-3">
+        <header class="sticky top-0 bg-white dark:bg-darkSurface z-50 px-4 md:px-8 py-4 border-b border-gray-200 dark:border-gray-800 transition-colors duration-300">
+            <div class="max-w-7xl mx-auto flex items-center gap-4">
+                <div class="text-xl font-black text-jumiaOrange hidden sm:block tracking-tighter">JUMIAO</div>
+                
                 <div class="flex-1 flex items-center bg-gray-100 dark:bg-gray-800 px-4 py-2.5 rounded-full transition-all duration-300 focus-within:ring-2 focus-within:ring-jumiaOrange">
-                    <i class="fa-solid fa-magnifying-glass text-gray-400 mr-2 transition-transform duration-300 group-focus-within:scale-110"></i>
-                    <input type="text" placeholder="Search on Jumia" class="bg-transparent w-full outline-none text-sm font-medium text-gray-700 dark:text-gray-200 placeholder-gray-400">
+                    <i class="fa-solid fa-magnifying-glass text-gray-400 mr-2"></i>
+                    <input type="text" placeholder="Search products, brands, and categories..." class="bg-transparent w-full outline-none text-sm font-medium text-gray-700 dark:text-gray-200 placeholder-gray-400">
                 </div>
                 <button id="themeToggle" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 dark:bg-gray-800 text-jumiaOrange text-lg hover:scale-110 active:scale-95 transition-all duration-200" title="Toggle Light/Dark Theme">
                     <i class="fa-solid fa-moon dark:hidden"></i>
@@ -63,152 +64,190 @@
             </div>
         </header>
 
-        <section class="bg-jumiaOrange text-white overflow-hidden relative h-36 flex items-center">
+        <section class="bg-jumiaOrange text-white overflow-hidden relative h-40 flex items-center">
             <div class="animate-marquee">
-                <div class="w-full flex-shrink-0 flex items-center justify-between px-6 select-none">
+                <div class="w-full flex-shrink-0 flex items-center justify-between px-6 md:px-20 select-none">
                     <div class="space-y-1">
-                        <span class="text-xs font-bold tracking-widest bg-black bg-opacity-20 px-2 py-0.5 rounded">JUMIA 14 YEARS</span>
-                        <h2 class="text-2xl font-black tracking-tight">8PM RUSH</h2>
-                        <p class="text-xs font-medium text-orange-100">UP TO 40% OFF STOREWIDE</p>
+                        <span class="text-xs font-bold tracking-widest bg-black bg-opacity-20 px-2 py-0.5 rounded">JUMIA 14 YEARS WITH YOU</span>
+                        <h2 class="text-3xl font-black tracking-tight md:text-4xl">8PM RUSH</h2>
+                        <p class="text-xs md:text-sm font-medium text-orange-100">UP TO 40% OFF STOREWIDE — 19TH JUNE | 8PM - 8:14PM</p>
                     </div>
-                    <i class="fa-solid fa-bolt-lightning text-5xl opacity-30 animate-pulse text-yellow-300"></i>
+                    <i class="fa-solid fa-bolt-lightning text-6xl opacity-30 animate-pulse text-yellow-300 hidden sm:block"></i>
                 </div>
-                <div class="w-full flex-shrink-0 flex items-center justify-between px-6 select-none">
+                <div class="w-full flex-shrink-0 flex items-center justify-between px-6 md:px-20 select-none">
                     <div class="space-y-1">
                         <span class="text-xs font-bold tracking-widest bg-black bg-opacity-20 px-2 py-0.5 rounded">MIDNIGHT MADNESS</span>
-                        <h2 class="text-2xl font-black tracking-tight">FLASH DEALS</h2>
-                        <p class="text-xs font-medium text-orange-100">LIMITED STOCK AVAILABLE NOW</p>
+                        <h2 class="text-3xl font-black tracking-tight md:text-4xl">FLASH DEALS</h2>
+                        <p class="text-xs md:text-sm font-medium text-orange-100">LIMITED STOCK AVAILABLE NOW — RUSH BEFORE EXPIRE</p>
                     </div>
-                    <i class="fa-solid fa-fire text-5xl opacity-30 animate-bounce"></i>
+                    <i class="fa-solid fa-fire text-6xl opacity-30 animate-bounce hidden sm:block"></i>
                 </div>
             </div>
         </section>
 
-        <section class="bg-jumiaRed text-white px-4 py-3 flex items-center justify-between shadow-sm select-none">
-            <div class="flex items-center gap-2 font-bold uppercase text-xs sm:text-sm tracking-wider">
-                <i class="fa-solid fa-bolt text-yellow-300 animate-pulse text-base"></i>
-                <span>Flash Sales</span>
-                <span id="countdown" class="bg-black bg-opacity-30 px-2 py-1 rounded font-mono text-xs tracking-normal normal-case ml-1 transition-all">03h : 18m : 26s</span>
+        <section class="bg-jumiaRed text-white px-4 md:px-8 py-3 shadow-sm select-none">
+            <div class="max-w-7xl mx-auto flex items-center justify-between">
+                <div class="flex items-center gap-2 font-bold uppercase text-xs sm:text-sm tracking-wider">
+                    <i class="fa-solid fa-bolt text-yellow-300 animate-pulse text-base"></i>
+                    <span>Flash Sales</span>
+                    <span id="countdown" class="bg-black bg-opacity-30 px-3 py-1 rounded font-mono text-xs tracking-normal normal-case ml-2">03h : 18m : 26s</span>
+                </div>
+                <a href="#" class="text-xs font-bold hover:underline transition-all flex items-center gap-1 group">
+                    SEE ALL 
+                    <i class="fa-solid fa-chevron-right text-[10px] transform group-hover:translate-x-1 transition-transform"></i>
+                </a>
             </div>
-            <a href="#" class="text-xs font-bold hover:underline transition-all flex items-center gap-1 group">
-                SEE ALL 
-                <i class="fa-solid fa-chevron-right text-[10px] transform group-hover:translate-x-1 transition-transform"></i>
-            </a>
         </section>
 
-        <main class="grid grid-cols-3 gap-2 p-3 bg-gray-100 dark:bg-gray-900 transition-colors duration-300">
-            
-            <article class="bg-white dark:bg-darkSurface p-2 rounded-xl flex flex-col relative shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 group cursor-pointer">
-                <span class="absolute top-2 right-2 bg-orange-100 dark:bg-orange-900/40 text-jumiaOrange text-[10px] font-black px-1.5 py-0.5 rounded z-10">-43%</span>
-                <div class="w-full aspect-square bg-white rounded-lg overflow-hidden flex items-center justify-center p-1">
-                    <img src="https://images.unsplash.com/photo-1578643463396-0997cb5328c1?w=200&auto=format&fit=crop&q=60" alt="Blender" class="object-contain w-full h-full mix-blend-multiply group-hover:scale-105 transition-transform duration-300">
-                </div>
-                <h3 class="text-[11px] font-medium mt-2 leading-tight text-gray-700 dark:text-gray-300 h-8 line-clamp-2">DB313 2 in 1 Classic Countertop Blender</h3>
-                <div class="text-xs font-black mt-1 text-gray-900 dark:text-white">GH₵ 172</div>
+        <main class="w-full bg-gray-100 dark:bg-gray-900 transition-colors duration-300 flex-1 py-4 px-4 md:px-8">
+            <div class="max-w-7xl mx-auto grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
                 
-                <div class="mt-auto pt-2">
-                    <div class="text-[9px] text-gray-400 dark:text-gray-500 mb-1 font-semibold">3 items left</div>
-                    <div class="w-full h-1.5 bg-gray-200 dark:bg-gray-800 rounded-full overflow-hidden">
-                        <div class="h-full bg-jumiaOrange rounded-full w-[15%]"></div>
+                <article class="bg-white dark:bg-darkSurface p-3 rounded-xl flex flex-col relative shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 group cursor-pointer">
+                    <span class="absolute top-2 right-2 bg-orange-100 dark:bg-orange-900/40 text-jumiaOrange text-[10px] font-black px-1.5 py-0.5 rounded z-10">-43%</span>
+                    <div class="w-full aspect-square bg-white rounded-lg overflow-hidden flex items-center justify-center p-2">
+                        <img src="https://images.unsplash.com/photo-1578643463396-0997cb5328c1?w=300&auto=format&fit=crop&q=60" alt="Blender" class="object-contain w-full h-full mix-blend-multiply group-hover:scale-105 transition-transform duration-300">
                     </div>
-                </div>
-            </article>
-
-            <article class="bg-white dark:bg-darkSurface p-2 rounded-xl flex flex-col relative shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 group cursor-pointer">
-                <span class="absolute top-2 right-2 bg-orange-100 dark:bg-orange-900/40 text-jumiaOrange text-[10px] font-black px-1.5 py-0.5 rounded z-10">-72%</span>
-                <div class="w-full aspect-square bg-white rounded-lg overflow-hidden flex items-center justify-center p-1">
-                    <img src="https://images.unsplash.com/photo-1588854337236-6889d631faa8?w=200&auto=format&fit=crop&q=60" alt="Industrial Blender" class="object-contain w-full h-full mix-blend-multiply group-hover:scale-105 transition-transform duration-300">
-                </div>
-                <h3 class="text-[11px] font-medium mt-2 leading-tight text-gray-700 dark:text-gray-300 h-8 line-clamp-2">2L Industrial 850W High Capacity Blender</h3>
-                <div class="text-xs font-black mt-1 text-gray-900 dark:text-white">GH₵ 129</div>
-                
-                <div class="mt-auto pt-2">
-                    <div class="text-[9px] text-gray-400 dark:text-gray-500 mb-1 font-semibold">50 items left</div>
-                    <div class="w-full h-1.5 bg-gray-200 dark:bg-gray-800 rounded-full overflow-hidden">
-                        <div class="h-full bg-jumiaOrange rounded-full w-[70%]"></div>
+                    <h3 class="text-xs font-semibold mt-3 leading-tight text-gray-700 dark:text-gray-300 h-8 line-clamp-2">DB313 2 in 1 Classic Countertop Blender</h3>
+                    <div class="text-sm font-black mt-1 text-gray-900 dark:text-white">GH₵ 172</div>
+                    
+                    <div class="mt-auto pt-3">
+                        <div class="text-[10px] text-gray-400 dark:text-gray-500 mb-1 font-bold">3 items left</div>
+                        <div class="w-full h-1.5 bg-gray-200 dark:bg-gray-800 rounded-full overflow-hidden">
+                            <div class="h-full bg-jumiaOrange rounded-full w-[15%]"></div>
+                        </div>
                     </div>
-                </div>
-            </article>
+                </article>
 
-            <article class="bg-white dark:bg-darkSurface p-2 rounded-xl flex flex-col relative shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 group cursor-pointer">
-                <span class="absolute top-2 right-2 bg-orange-100 dark:bg-orange-900/40 text-jumiaOrange text-[10px] font-black px-1.5 py-0.5 rounded z-10">-25%</span>
-                <div class="w-full aspect-square bg-white rounded-lg overflow-hidden flex items-center justify-center p-1">
-                    <img src="https://images.unsplash.com/photo-1608248597481-496100c8c836?w=200&auto=format&fit=crop&q=60" alt="Body Spray" class="object-contain w-full h-full mix-blend-multiply group-hover:scale-105 transition-transform duration-300">
-                </div>
-                <h3 class="text-[11px] font-medium mt-2 leading-tight text-gray-700 dark:text-gray-300 h-8 line-clamp-2">Body Spray 200ml Fresh Pack Protection</h3>
-                <div class="text-xs font-black mt-1 text-gray-900 dark:text-white">GH₵ 95</div>
-                
-                <div class="mt-auto pt-2">
-                    <div class="text-[9px] text-gray-400 dark:text-gray-500 mb-1 font-semibold">7 items left</div>
-                    <div class="w-full h-1.5 bg-gray-200 dark:bg-gray-800 rounded-full overflow-hidden">
-                        <div class="h-full bg-jumiaOrange rounded-full w-[35%]"></div>
+                <article class="bg-white dark:bg-darkSurface p-3 rounded-xl flex flex-col relative shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 group cursor-pointer">
+                    <span class="absolute top-2 right-2 bg-orange-100 dark:bg-orange-900/40 text-jumiaOrange text-[10px] font-black px-1.5 py-0.5 rounded z-10">-72%</span>
+                    <div class="w-full aspect-square bg-white rounded-lg overflow-hidden flex items-center justify-center p-2">
+                        <img src="https://images.unsplash.com/photo-1588854337236-6889d631faa8?w=300&auto=format&fit=crop&q=60" alt="Industrial Blender" class="object-contain w-full h-full mix-blend-multiply group-hover:scale-105 transition-transform duration-300">
                     </div>
-                </div>
-            </article>
+                    <h3 class="text-xs font-semibold mt-3 leading-tight text-gray-700 dark:text-gray-300 h-8 line-clamp-2">2L Industrial 850W High Capacity Blender</h3>
+                    <div class="text-sm font-black mt-1 text-gray-900 dark:text-white">GH₵ 129</div>
+                    
+                    <div class="mt-auto pt-3">
+                        <div class="text-[10px] text-gray-400 dark:text-gray-500 mb-1 font-bold">50 items left</div>
+                        <div class="w-full h-1.5 bg-gray-200 dark:bg-gray-800 rounded-full overflow-hidden">
+                            <div class="h-full bg-jumiaOrange rounded-full w-[70%]"></div>
+                        </div>
+                    </div>
+                </article>
 
+                <article class="bg-white dark:bg-darkSurface p-3 rounded-xl flex flex-col relative shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 group cursor-pointer">
+                    <span class="absolute top-2 right-2 bg-orange-100 dark:bg-orange-900/40 text-jumiaOrange text-[10px] font-black px-1.5 py-0.5 rounded z-10">-25%</span>
+                    <div class="w-full aspect-square bg-white rounded-lg overflow-hidden flex items-center justify-center p-2">
+                        <img src="https://images.unsplash.com/photo-1608248597481-496100c8c836?w=300&auto=format&fit=crop&q=60" alt="Body Spray" class="object-contain w-full h-full mix-blend-multiply group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <h3 class="text-xs font-semibold mt-3 leading-tight text-gray-700 dark:text-gray-300 h-8 line-clamp-2">Body Spray 200ml Fresh Pack Protection</h3>
+                    <div class="text-sm font-black mt-1 text-gray-900 dark:text-white">GH₵ 95</div>
+                    
+                    <div class="mt-auto pt-3">
+                        <div class="text-[10px] text-gray-400 dark:text-gray-500 mb-1 font-bold">7 items left</div>
+                        <div class="w-full h-1.5 bg-gray-200 dark:bg-gray-800 rounded-full overflow-hidden">
+                            <div class="h-full bg-jumiaOrange rounded-full w-[35%]"></div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="bg-white dark:bg-darkSurface p-3 rounded-xl flex flex-col relative shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 group cursor-pointer hidden md:flex">
+                    <span class="absolute top-2 right-2 bg-orange-100 dark:bg-orange-900/40 text-jumiaOrange text-[10px] font-black px-1.5 py-0.5 rounded z-10">-15%</span>
+                    <div class="w-full aspect-square bg-white rounded-lg overflow-hidden flex items-center justify-center p-2">
+                        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=300&auto=format&fit=crop&q=60" alt="Shoes" class="object-contain w-full h-full mix-blend-multiply group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <h3 class="text-xs font-semibold mt-3 leading-tight text-gray-700 dark:text-gray-300 h-8 line-clamp-2">Sport Athletic Performance Running Shoes</h3>
+                    <div class="text-sm font-black mt-1 text-gray-900 dark:text-white">GH₵ 240</div>
+                    <div class="mt-auto pt-3"><div class="text-[10px] text-gray-400 dark:text-gray-500 mb-1 font-bold">12 items left</div><div class="w-full h-1.5 bg-gray-200 dark:bg-gray-800 rounded-full overflow-hidden"><div class="h-full bg-jumiaOrange rounded-full w-[50%]"></div></div></div>
+                </article>
+
+                <article class="bg-white dark:bg-darkSurface p-3 rounded-xl flex flex-col relative shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 group cursor-pointer hidden lg:flex">
+                    <span class="absolute top-2 right-2 bg-orange-100 dark:bg-orange-900/40 text-jumiaOrange text-[10px] font-black px-1.5 py-0.5 rounded z-10">-50%</span>
+                    <div class="w-full aspect-square bg-white rounded-lg overflow-hidden flex items-center justify-center p-2">
+                        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=300&auto=format&fit=crop&q=60" alt="Headphones" class="object-contain w-full h-full mix-blend-multiply group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <h3 class="text-xs font-semibold mt-3 leading-tight text-gray-700 dark:text-gray-300 h-8 line-clamp-2">Wireless Noise Cancelling Headset Pro</h3>
+                    <div class="text-sm font-black mt-1 text-gray-900 dark:text-white">GH₵ 310</div>
+                    <div class="mt-auto pt-3"><div class="text-[10px] text-gray-400 dark:text-gray-500 mb-1 font-bold">19 items left</div><div class="w-full h-1.5 bg-gray-200 dark:bg-gray-800 rounded-full overflow-hidden"><div class="h-full bg-jumiaOrange rounded-full w-[80%]"></div></div></div>
+                </article>
+
+                <article class="bg-white dark:bg-darkSurface p-3 rounded-xl flex flex-col relative shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 group cursor-pointer hidden lg:flex">
+                    <span class="absolute top-2 right-2 bg-orange-100 dark:bg-orange-900/40 text-jumiaOrange text-[10px] font-black px-1.5 py-0.5 rounded z-10">-30%</span>
+                    <div class="w-full aspect-square bg-white rounded-lg overflow-hidden flex items-center justify-center p-2">
+                        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=300&auto=format&fit=crop&q=60" alt="Watch" class="object-contain w-full h-full mix-blend-multiply group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <h3 class="text-xs font-semibold mt-3 leading-tight text-gray-700 dark:text-gray-300 h-8 line-clamp-2">Minimalist Luxury Chronograph Wrist Watch</h3>
+                    <div class="text-sm font-black mt-1 text-gray-900 dark:text-white">GH₵ 420</div>
+                    <div class="mt-auto pt-3"><div class="text-[10px] text-gray-400 dark:text-gray-500 mb-1 font-bold font-semibold">2 items left</div><div class="w-full h-1.5 bg-gray-200 dark:bg-gray-800 rounded-full overflow-hidden"><div class="h-full bg-jumiaOrange rounded-full w-[10%]"></div></div></div>
+                </article>
+
+            </div>
         </main>
 
-        <nav class="grid grid-cols-4 gap-2 px-4 py-5 bg-white dark:bg-darkSurface transition-colors duration-300 select-none">
-            <a href="#" class="flex flex-col items-center group text-center">
-                <div class="w-12 h-12 rounded-2xl bg-blue-400 text-white flex items-center justify-center text-lg shadow-sm group-hover:scale-110 active:scale-95 transition-all duration-200">
-                    <i class="fa-solid fa-tags"></i>
-                </div>
-                <span class="text-[11px] font-bold mt-2 text-gray-600 dark:text-gray-300 group-hover:text-jumiaOrange transition-colors">Brand Day</span>
-            </a>
-            <a href="#" class="flex flex-col items-center group text-center">
-                <div class="w-12 h-12 rounded-2xl bg-amber-400 text-white flex items-center justify-center text-lg shadow-sm group-hover:scale-110 active:scale-95 transition-all duration-200">
-                    <i class="fa-solid fa-truck-fast"></i>
-                </div>
-                <span class="text-[11px] font-bold mt-2 text-gray-600 dark:text-gray-300 group-hover:text-jumiaOrange transition-colors">Secure Delivery</span>
-            </a>
-            <a href="#" class="flex flex-col items-center group text-center">
-                <div class="w-12 h-12 rounded-2xl bg-green-500 text-white flex items-center justify-center text-lg shadow-sm group-hover:scale-110 active:scale-95 transition-all duration-200">
-                    <i class="fa-solid fa-headset"></i>
-                </div>
-                <span class="text-[11px] font-bold mt-2 text-gray-600 dark:text-gray-300 group-hover:text-jumiaOrange transition-colors">Call to Order</span>
-            </a>
-            <a href="#" class="flex flex-col items-center group text-center">
-                <div class="w-12 h-12 rounded-2xl bg-orange-400 text-white flex items-center justify-center text-lg shadow-sm group-hover:scale-110 active:scale-95 transition-all duration-200">
-                    <i class="fa-solid fa-hand-holding-dollar"></i>
-                </div>
-                <span class="text-[11px] font-bold mt-2 text-gray-600 dark:text-gray-300 group-hover:text-jumiaOrange transition-colors">Extra Cash</span>
-            </a>
+        <nav class="bg-white dark:bg-darkSurface border-t border-b border-gray-100 dark:border-gray-800 transition-colors duration-300 select-none px-4 py-6">
+            <div class="max-w-4xl mx-auto grid grid-cols-4 gap-4">
+                <a href="#" class="flex flex-col items-center group text-center">
+                    <div class="w-14 h-14 rounded-2xl bg-blue-400 text-white flex items-center justify-center text-xl shadow-sm group-hover:scale-110 active:scale-95 transition-all duration-200">
+                        <i class="fa-solid fa-tags"></i>
+                    </div>
+                    <span class="text-xs font-bold mt-2 text-gray-600 dark:text-gray-300 group-hover:text-jumiaOrange transition-colors">Brand Day</span>
+                </a>
+                <a href="#" class="flex flex-col items-center group text-center">
+                    <div class="w-14 h-14 rounded-2xl bg-amber-400 text-white flex items-center justify-center text-xl shadow-sm group-hover:scale-110 active:scale-95 transition-all duration-200">
+                        <i class="fa-solid fa-truck-fast"></i>
+                    </div>
+                    <span class="text-xs font-bold mt-2 text-gray-600 dark:text-gray-300 group-hover:text-jumiaOrange transition-colors">Secure Delivery</span>
+                </a>
+                <a href="#" class="flex flex-col items-center group text-center">
+                    <div class="w-14 h-14 rounded-2xl bg-green-500 text-white flex items-center justify-center text-xl shadow-sm group-hover:scale-110 active:scale-95 transition-all duration-200">
+                        <i class="fa-solid fa-headset"></i>
+                    </div>
+                    <span class="text-xs font-bold mt-2 text-gray-600 dark:text-gray-300 group-hover:text-jumiaOrange transition-colors">Call to Order</span>
+                </a>
+                <a href="#" class="flex flex-col items-center group text-center">
+                    <div class="w-14 h-14 rounded-2xl bg-orange-400 text-white flex items-center justify-center text-xl shadow-sm group-hover:scale-110 active:scale-95 transition-all duration-200">
+                        <i class="fa-solid fa-hand-holding-dollar"></i>
+                    </div>
+                    <span class="text-xs font-bold mt-2 text-gray-600 dark:text-gray-300 group-hover:text-jumiaOrange transition-colors">Make Extra Cash</span>
+                </a>
+            </div>
         </nav>
 
-        <nav class="absolute md:fixed bottom-0 left-0 right-0 bg-white dark:bg-darkSurface border-t border-gray-200 dark:border-gray-800 grid grid-cols-5 py-2 z-50 transition-colors duration-300 select-none">
-            <a href="#" class="flex flex-col items-center justify-center text-jumiaOrange">
-                <i class="fa-solid fa-house text-base"></i>
-                <span class="text-[10px] font-bold mt-1">Home</span>
-            </a>
-            <a href="#" class="flex flex-col items-center justify-center text-gray-400 dark:text-gray-500 hover:text-jumiaOrange transition-colors">
-                <i class="fa-solid fa-list text-base"></i>
-                <span class="text-[10px] font-bold mt-1">Categories</span>
-            </a>
-            <a href="#" class="flex flex-col items-center justify-center text-gray-400 dark:text-gray-500 hover:text-jumiaOrange transition-colors relative">
-                <i class="fa-solid fa-cart-shopping text-base"></i>
-                <span class="text-[10px] font-bold mt-1">Cart</span>
-                <span class="absolute top-1 right-4 bg-jumiaOrange text-white text-[9px] font-bold rounded-full w-4 h-4 flex items-center justify-center scale-90 animate-bounce">2</span>
-            </a>
-            <a href="#" class="flex flex-col items-center justify-center text-gray-400 dark:text-gray-500 hover:text-jumiaOrange transition-colors">
-                <i class="fa-solid fa-heart text-base"></i>
-                <span class="text-[10px] font-bold mt-1">Wishlist</span>
-            </a>
-            <a href="#" class="flex flex-col items-center justify-center text-gray-400 dark:text-gray-500 hover:text-jumiaOrange transition-colors">
-                <i class="fa-solid fa-user text-base"></i>
-                <span class="text-[10px] font-bold mt-1">Account</span>
-            </a>
+        <nav class="fixed bottom-0 left-0 right-0 bg-white dark:bg-darkSurface border-t border-gray-200 dark:border-gray-800 py-3 z-50 transition-colors duration-300 select-none shadow-[0_-4px_12px_rgba(0,0,0,0.05)]">
+            <div class="max-w-xl mx-auto grid grid-cols-5 text-center">
+                <a href="#" class="flex flex-col items-center justify-center text-jumiaOrange">
+                    <i class="fa-solid fa-house text-lg"></i>
+                    <span class="text-[10px] font-bold mt-1">Home</span>
+                </a>
+                <a href="#" class="flex flex-col items-center justify-center text-gray-400 dark:text-gray-500 hover:text-jumiaOrange transition-colors">
+                    <i class="fa-solid fa-list text-lg"></i>
+                    <span class="text-[10px] font-bold mt-1">Categories</span>
+                </a>
+                <a href="#" class="flex flex-col items-center justify-center text-gray-400 dark:text-gray-500 hover:text-jumiaOrange transition-colors relative">
+                    <i class="fa-solid fa-cart-shopping text-lg"></i>
+                    <span class="text-[10px] font-bold mt-1">Cart</span>
+                    <span class="absolute top-0.5 right-6 bg-jumiaOrange text-white text-[9px] font-bold rounded-full w-4 h-4 flex items-center justify-center scale-90 animate-bounce">2</span>
+                </a>
+                <a href="#" class="flex flex-col items-center justify-center text-gray-400 dark:text-gray-500 hover:text-jumiaOrange transition-colors">
+                    <i class="fa-solid fa-heart text-lg"></i>
+                    <span class="text-[10px] font-bold mt-1">Wishlist</span>
+                </a>
+                <a href="#" class="flex flex-col items-center justify-center text-gray-400 dark:text-gray-500 hover:text-jumiaOrange transition-colors">
+                    <i class="fa-solid fa-user text-lg"></i>
+                    <span class="text-[10px] font-bold mt-1">Account</span>
+                </a>
+            </div>
         </nav>
 
     </div>
 
     <script>
-        // Theme Alternator Toggler
+        // Light/Dark Theme Switching Core
         const themeBtn = document.getElementById('themeToggle');
         themeBtn.addEventListener('click', () => {
             document.documentElement.classList.toggle('dark');
         });
 
-        // Precision Continuous Realtime Countdown Timer System
+        // Continuous Realtime Countdown Timer Loop
         let countdownSecs = (3 * 3600) + (18 * 60) + 26;
         const clockDisplay = document.getElementById('countdown');
 
